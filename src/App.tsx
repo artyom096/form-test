@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import { Form } from './Components/Form/Form';
+import { Profile } from './Components/Profile';
+import { Title } from './Components/Title';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App: React.FC = () => {
+	const Wrapper = styled.div`
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		position: relative;
+		z-index: 1000;
+	`;
 
-export default App;
+	return (
+		<BrowserRouter>
+			<Title />
+			<Wrapper>
+				<Route path="/" exact component={Form} />
+				<Route path="/profile" exact component={Profile} />
+			</Wrapper>
+		</BrowserRouter>
+	);
+};
