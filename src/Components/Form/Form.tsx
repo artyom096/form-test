@@ -96,7 +96,7 @@ export const Form: React.FC = () => {
 			) : (
 				<AbsancePerson>
 					<div>!</div>
-					{`Пользователя ${data?.login} не существует`}
+					<p>{`Пользователя ${data?.login} не существует`}</p>
 				</AbsancePerson>
 			)}
 			<InputGroup>

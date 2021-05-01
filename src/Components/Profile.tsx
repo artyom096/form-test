@@ -27,10 +27,12 @@ const ProfileWrapper = styled.div`
 		margin: 0 auto;
 		text-decoration: none;
 		background-color: #eee;
-		padding: 20px 70px;
+		padding: 20px 0;
 		border-radius: 8px;
 		width: 200px;
 		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
 	}
 `;
 

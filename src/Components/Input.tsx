@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { InputWrapper } from './InputWrapper';
 
 interface IInputProps {
@@ -7,14 +7,12 @@ interface IInputProps {
 	required: boolean;
 	id: string;
 	type: string;
-	register: any;
+	register: UseFormRegister<any>;
 	children: string;
-	errors: any;
+	errors: FieldErrors;
 }
 
 export const Input: React.FC<IInputProps> = ({ name, register, required, type, id, children, errors }) => {
-	console.log(errors);
-
 	return (
 		<InputWrapper name={name} errors={errors}>
 			<label htmlFor={id}>{children}</label>

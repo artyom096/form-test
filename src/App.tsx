@@ -5,17 +5,17 @@ import { Form } from './Components/Form/Form';
 import { Profile } from './Components/Profile';
 import { Title } from './Components/Title';
 
-export const App: React.FC = () => {
-	const Wrapper = styled.div`
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		position: relative;
-		z-index: 1000;
-	`;
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	z-index: 1000;
+`;
 
+export const App: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<Title />
