@@ -39,7 +39,9 @@ const ProfileWrapper = styled.div`
 export const Profile: React.FC<IProfileProps> = (props) => {
 	return (
 		<ProfileWrapper>
-			<p>Здравствуйте, {props.location.state.login}</p>
+			<p>
+				Здравствуйте, <b>{props.location.state.login}</b>
+			</p>
 			<NavLink to="/">Выйти</NavLink>
 		</ProfileWrapper>
 	);
